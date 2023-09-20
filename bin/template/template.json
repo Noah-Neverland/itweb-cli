@@ -1,0 +1,17 @@
+{
+  "mobile-vue": {
+    "url": "https://gitee.com/hanshuaishuai/lego-mobile-vue-cli.git",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/lego-mobile-vue-cli.git#master",
+    "description": "基于vue-cli搭建的移动端脚手架"
+  },
+  "pc-vue": {
+    "url": "https://gitee.com/hanshuaishuai/lego-pc-vue-cli.git",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/lego-pc-vue-cli.git#master",
+    "description": "基于vue-cli搭建的PC端脚手架"
+  },
+  "npm": {
+    "url": "https://gitee.com/hanshuaishuai/npm-template.git",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/npm-template.git#master",
+    "description": "开发npm插件"
+  }
+}

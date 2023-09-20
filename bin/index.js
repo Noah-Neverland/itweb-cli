@@ -1,0 +1,64 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const yargs = require('yargs');
+const path = require('path');
+const ora = require('ora');
+const chalk = require('chalk');
+const {inquirerPrompt} = require('./inquirer');
+const {checkMkdirExists} = require('./copy');
+const {install} = require('./manager');
+const handlebars = require('handlebars');
+const download = require('download-git-repo');
+const {rmFsDirSync} = require('./utils');
+const tplObj = require(`${__dirname}/template/template.json`);
+
+yargs.command(
+  ['create', 'c'],
+  '新建项目',
+  function (yargs) {
+    return yargs.options('name', {
+      alias: 'n',
+      demand: true,
+      describe: '项目名称',
+      type: 'string',
+    });
+  },
+  function (argv) {
+    const {name} = argv;
+    if (!name) return console.log(chalk.red('\n 项目名称必填 \n '));
+    const dirPath = path.resolve(process.cwd(), `./${name}`);
+    const isMkdirExists = checkMkdirExists(dirPath);
+    if (isMkdirExists)
+      return console.log(chalk.red(`\n ${name}项目已存在！ \n `));
+    inquirerPrompt(argv).then((answers) => {
+      const {name, template} = answers;
+      const {downloadUrl} = tplObj[template];
+      if (!downloadUrl) return console.log(chalk.red('\n 模版取值失败 \n '));
+      console.log(chalk.white('\n Start generating... \n'));
+      const spinner = ora('Downloading...');
+      spinner.start();
+      // clone项目
+      download(downloadUrl, name, {clone: true}, (err) => {
+        if (err) return spinner.fail();
+        spinner.succeed();
+        try {
+          const packagePath = `${name}/package.json`;
+          const packageContent = fs.readFileSync(packagePath, 'utf8');
+          const packageResult = handlebars.compile(packageContent)(answers);
+          // 将配置信息写进package.json文件里
+          fs.writeFileSync(packagePath, packageResult);
+          // 下载安装依赖
+          install(dirPath, answers)
+            .then(() => {
+              console.log(chalk.grey(`\n cd ${name} `));
+              console.log(chalk.grey(`\n pnpm serve \n`));
+            })
+            .catch((error) => console.log(chalk.red(`\n ${error} \n `)));
+        } catch (error) {
+          console.log(chalk.red(`\n ${error} \n `));
+          rmFsDirSync(dirPath);
+        }
+      });
+    });
+  }
+).argv;
