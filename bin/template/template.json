@@ -14,6 +14,11 @@
     "downloadUrl": "https://gitee.com:hanshuaishuai/taro-template.git#master",
     "description": "基于Taro、React搭建的多端开发脚手架"
   },
+  "vue3-admin": {
+    "url": "https://gitee.com/hanshuaishuai/vue3-admin-template",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/vue3-admin-template.git#master",
+    "description": "基于vue3开发的后管管理系统"
+  },
   "npm": {
     "url": "https://gitee.com/hanshuaishuai/npm-template",
     "downloadUrl": "https://gitee.com:hanshuaishuai/npm-template.git#master",
