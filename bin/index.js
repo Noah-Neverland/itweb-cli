@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const yargs = require('yargs');
+const {hideBin} = require('yargs/helpers');
 const path = require('path');
 const ora = require('ora');
 const chalk = require('chalk');
+const process = require('process');
 const {inquirerPrompt} = require('./inquirer');
 const {checkMkdirExists} = require('./copy');
 const {install} = require('./manager');
@@ -12,9 +14,12 @@ const download = require('download-git-repo');
 const {rmFsDirSync} = require('./utils');
 const tplObj = require(`${__dirname}/template/template.json`);
 
-yargs
+const cli = yargs(hideBin(process.argv));
+
+cli
   .usage('Usage: itweb <command> [options]')
   .version(require('../package').version)
+  .wrap(cli.terminalWidth())
   .help('h')
   .alias('h', 'help')
   .alias('v', 'version')
@@ -88,7 +93,7 @@ yargs
   .options({
     name: {
       type: 'string',
-      describe: '新建项目名称',
+      describe: 'new project name',
       alias: 'n',
     },
   })
