@@ -13,7 +13,7 @@ const {rmFsDirSync} = require('./utils');
 const tplObj = require(`${__dirname}/template/template.json`);
 
 yargs
-  .usage('Usage: $0 <command> [options]')
+  .usage('Usage: itweb <command> [options]')
   .version(require('../package').version)
   .help('h')
   .alias('h', 'help')
