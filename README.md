@@ -1,4 +1,4 @@
-# itweb-cli v1.0.4
+# itweb-cli v1.0.5
 
 纯净版前端项目开发模版
 

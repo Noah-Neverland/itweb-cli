@@ -81,4 +81,12 @@ yargs
         console.log(`${key} ｜ ${tplObj[key].description}`);
       }
     }
-  ).argv;
+  )
+  .options({
+    name: {
+      type: 'string',
+      describe: '新建项目名称',
+      alias: 'n',
+    },
+  })
+  .group(['name'], 'create [options]').argv;

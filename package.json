@@ -1,6 +1,6 @@
 {
   "name": "itweb-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "纯净版项目开发模版",
   "main": "index.js",
   "scripts": {
