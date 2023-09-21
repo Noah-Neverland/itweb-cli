@@ -49,7 +49,10 @@ yargs
         spinner.start();
         // clone项目
         download(downloadUrl, name, {clone: true}, (err) => {
-          if (err) return spinner.fail();
+          if (err) {
+            console.log('err===', err);
+            return spinner.fail();
+          }
           spinner.succeed();
           try {
             const packagePath = `${name}/package.json`;

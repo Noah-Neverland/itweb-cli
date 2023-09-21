@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');
+const tplObj = require(`${__dirname}/template/template.json`);
+const templateOptions = Object.keys(tplObj);
 
 function inquirerPrompt(argv) {
   const {name} = argv;
@@ -31,7 +33,7 @@ function inquirerPrompt(argv) {
           type: 'list',
           name: 'template',
           message: '模板选项',
-          choices: ['mobile-vue', 'pc-vue', 'npm'],
+          choices: [...templateOptions],
         },
       ])
       .then((answers) => {

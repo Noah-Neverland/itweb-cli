@@ -11,7 +11,7 @@
   },
   "taro-react": {
     "url": "https://gitee.com/hanshuaishuai/taro-template",
-    "downloadUrl": "https://gitee.com/hanshuaishuai/taro-template.git#master",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/taro-template.git#master",
     "description": "基于Taro、React搭建的多端开发脚手架"
   },
   "npm": {

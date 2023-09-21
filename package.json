@@ -1,17 +1,19 @@
 {
   "name": "itweb-cli",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "纯净版项目开发模版",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Noah-Neverland/itweb-cli.git"
   },
   "keywords": [
-    "itweb"
+    "itweb",
+    "vue",
+    "react",
+    "vantui",
+    "@antmjs/vantui",
+    "elementui"
   ],
   "author": "ssh",
   "license": "ISC",
