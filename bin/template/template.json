@@ -23,5 +23,10 @@
     "url": "https://gitee.com/hanshuaishuai/npm-template",
     "downloadUrl": "https://gitee.com:hanshuaishuai/npm-template.git#master",
     "description": "开发npm插件"
+  },
+  "uni-app": {
+    "url": "https://gitee.com/hanshuaishuai/uni-cli-app-template",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/uni-cli-app-template.git#master",
+    "description": "通过vue-cli命令行安装的uni-app项目开发模版"
   }
 }

@@ -19,3 +19,4 @@ $ itweb c --name [project-name] or itweb create --name=[project-name]
 - npm（编写 npm 插件）
 - taro-react（taro、react、@antmjs/vantui）多端开发模版
 - vue3-admin-template（vue3）后台管理系统项目模版
+- uni-cli-app-template（vue3）通过 vue-cli 命令行安装的 uni-app 项目开发模版
