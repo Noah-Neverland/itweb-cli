@@ -28,5 +28,10 @@
     "url": "https://gitee.com/hanshuaishuai/uni-cli-app-template",
     "downloadUrl": "https://gitee.com:hanshuaishuai/uni-cli-app-template.git#master",
     "description": "通过vue-cli命令行安装的uni-app项目开发模版"
+  },
+  "vite-vue3-typescript-pc": {
+    "url": "https://gitee.com/hanshuaishuai/vite-vue3-typescript-pc-template",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/vite-vue3-typescript-pc-template.git#master",
+    "description": "基于 vite+vue3+ts+elementplus 的 PC 项目模版"
   }
 }

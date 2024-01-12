@@ -1,6 +1,6 @@
 {
   "name": "itweb-cli",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "纯净版项目开发模版",
   "main": "index.js",
   "repository": {
@@ -14,7 +14,8 @@
     "taro",
     "vantui",
     "@antmjs/vantui",
-    "elementui"
+    "elementui",
+    "element-plus"
   ],
   "author": "ssh",
   "license": "ISC",
