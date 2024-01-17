@@ -28,5 +28,10 @@
     "url": "https://gitee.com/hanshuaishuai/vite-vue3-typescript-pc-template",
     "downloadUrl": "https://gitee.com:hanshuaishuai/vite-vue3-typescript-pc-template.git#master",
     "description": "基于 vite+vue3+ts+elementplus的PC项目模版"
+  },
+  "vite-vue3-typescript-mobile": {
+    "url": "https://gitee.com/hanshuaishuai/vite-vue3-typescript-mobile-template",
+    "downloadUrl": "https://gitee.com:hanshuaishuai/vite-vue3-typescript-mobile-template.git#master",
+    "description": "基于 vite+vue3+ts+vant的H5项目模版"
   }
 }
