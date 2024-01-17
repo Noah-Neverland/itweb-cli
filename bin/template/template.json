@@ -4,11 +4,6 @@
     "downloadUrl": "https://gitee.com:hanshuaishuai/lego-mobile-vue-cli.git#master",
     "description": "基于vue-cli搭建的移动端脚手架"
   },
-  "pc-vue": {
-    "url": "https://gitee.com/hanshuaishuai/lego-pc-vue-cli",
-    "downloadUrl": "https://gitee.com:hanshuaishuai/lego-pc-vue-cli.git#master",
-    "description": "基于vue-cli搭建的PC端脚手架"
-  },
   "taro-react": {
     "url": "https://gitee.com/hanshuaishuai/taro-template",
     "downloadUrl": "https://gitee.com:hanshuaishuai/taro-template.git#master",
@@ -32,6 +27,6 @@
   "vite-vue3-typescript-pc": {
     "url": "https://gitee.com/hanshuaishuai/vite-vue3-typescript-pc-template",
     "downloadUrl": "https://gitee.com:hanshuaishuai/vite-vue3-typescript-pc-template.git#master",
-    "description": "基于 vite+vue3+ts+elementplus 的 PC 项目模版"
+    "description": "基于 vite+vue3+ts+elementplus的PC项目模版"
   }
 }
